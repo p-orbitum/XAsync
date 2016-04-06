@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name                  = "XAsync"
-  s.version               = "1.0.0-rc1"
+  s.version               = "1.0.0"
   s.summary               = "Convenient wrapper for async operations."
-  s.description           = "Allows to write an asyncronous code in synchronous manner. Inspired by C#'s await construction."
+  s.description           = "Allows to write an asyncronous code in synchronous manner. Inspired by C#'s await instruction."
   s.cocoapods_version     = ">= 0.36"
   s.homepage              = "https://github.com/p-orbitum/XAsync"
   s.license               = { :type => "MIT", :file => "LICENSE" }
