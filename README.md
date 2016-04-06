@@ -9,7 +9,7 @@
 
 ## Introduction
 
-Working with asyncronous operations might be tedious. In general there are two ways of doing this: using blocks and GCD (NSOperations are here as well) and using delegation. When the code performs a lot of such asynchronous operations it becomes very hard at some point to read this code. Obviously, synchronous code is much more convenient to read and maintain. Here XAsync comes into play. It allows to call asynchronous opertion and stop further execution of current method until asynchronous operation is done. It implemented in non-blocking manner, so other events can be (and will be) handled on the caller thread when asynchronous operation is executing.
+Working with asyncronous operations might be tedious. In general there are two ways of doing this: using blocks and GCD (NSOperations are here as well) and using delegation. When the code performs a lot of such asynchronous operations it becomes very hard at some point to read this code. Obviously, synchronous code is much more convenient to read and maintain. This is where XAsync comes into play. It allows to call asynchronous opertion and stop further execution of current method until asynchronous operation is done. It is implemented in non-blocking manner, so other events can be (and will be) handled on the caller's thread when asynchronous operation is executing.
     
 XAsync functionality inspired by C#'s await code constructions.
 
