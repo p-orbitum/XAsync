@@ -115,7 +115,7 @@ XAsync.await{
 print("Async task 1 has been done.")
 
 print("About to start async task 2.")
-if let result = Async.awaitResult({ () -> AnyObject? in
+if let result = XAsync.awaitResult({ () -> AnyObject? in
     print("Task 2 has been started.")
     var i = 0
     for _ in 1...1000000000 {
