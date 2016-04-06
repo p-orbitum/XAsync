@@ -1,0 +1,261 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		367FB9EF1CB54742005C9195 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FB9EE1CB54742005C9195 /* main.m */; };
+		367FB9F81CB54790005C9195 /* XAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FB9F71CB54790005C9195 /* XAsync.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		367FB9E91CB54742005C9195 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		367FB9EB1CB54742005C9195 /* XAsyncSample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XAsyncSample; sourceTree = BUILT_PRODUCTS_DIR; };
+		367FB9EE1CB54742005C9195 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		367FB9F61CB54790005C9195 /* XAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAsync.h; sourceTree = "<group>"; };
+		367FB9F71CB54790005C9195 /* XAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAsync.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		367FB9E81CB54742005C9195 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		367FB9E21CB54742005C9195 = {
+			isa = PBXGroup;
+			children = (
+				367FB9F51CB54790005C9195 /* Content */,
+				367FB9ED1CB54742005C9195 /* XAsyncSample */,
+				367FB9EC1CB54742005C9195 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		367FB9EC1CB54742005C9195 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				367FB9EB1CB54742005C9195 /* XAsyncSample */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		367FB9ED1CB54742005C9195 /* XAsyncSample */ = {
+			isa = PBXGroup;
+			children = (
+				367FB9EE1CB54742005C9195 /* main.m */,
+			);
+			path = XAsyncSample;
+			sourceTree = "<group>";
+		};
+		367FB9F51CB54790005C9195 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				367FB9F61CB54790005C9195 /* XAsync.h */,
+				367FB9F71CB54790005C9195 /* XAsync.m */,
+			);
+			name = Content;
+			path = ../../Content;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		367FB9EA1CB54742005C9195 /* XAsyncSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 367FB9F21CB54742005C9195 /* Build configuration list for PBXNativeTarget "XAsyncSample" */;
+			buildPhases = (
+				367FB9E71CB54742005C9195 /* Sources */,
+				367FB9E81CB54742005C9195 /* Frameworks */,
+				367FB9E91CB54742005C9195 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XAsyncSample;
+			productName = XAsyncSample;
+			productReference = 367FB9EB1CB54742005C9195 /* XAsyncSample */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		367FB9E31CB54742005C9195 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Orbitum;
+				TargetAttributes = {
+					367FB9EA1CB54742005C9195 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 367FB9E61CB54742005C9195 /* Build configuration list for PBXProject "XAsyncSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 367FB9E21CB54742005C9195;
+			productRefGroup = 367FB9EC1CB54742005C9195 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				367FB9EA1CB54742005C9195 /* XAsyncSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		367FB9E71CB54742005C9195 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				367FB9EF1CB54742005C9195 /* main.m in Sources */,
+				367FB9F81CB54790005C9195 /* XAsync.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		367FB9F01CB54742005C9195 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		367FB9F11CB54742005C9195 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		367FB9F31CB54742005C9195 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		367FB9F41CB54742005C9195 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		367FB9E61CB54742005C9195 /* Build configuration list for PBXProject "XAsyncSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				367FB9F01CB54742005C9195 /* Debug */,
+				367FB9F11CB54742005C9195 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		367FB9F21CB54742005C9195 /* Build configuration list for PBXNativeTarget "XAsyncSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				367FB9F31CB54742005C9195 /* Debug */,
+				367FB9F41CB54742005C9195 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 367FB9E31CB54742005C9195 /* Project object */;
+}
