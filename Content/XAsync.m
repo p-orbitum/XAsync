@@ -20,8 +20,8 @@ NS_ASSUME_NONNULL_END
 
 @implementation XAsync
 
-+ (void)await:(void (^)(void))task {
-    if (task == nil) {
++ (void)await:(XAsyncAction)action {
+    if (action == nil) {
         return;
     }
     
@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_END
     
     NSInteger __block done = 0;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        task();
+        action();
         done = 1;
         CFRunLoopSourceSignal(source);
         CFRunLoopWakeUp(callerRunLoop);
@@ -45,8 +45,8 @@ NS_ASSUME_NONNULL_END
     }
 }
 
-+ (id _Nullable)awaitResult:(id _Nullable (^)(void))task {
-    if (task == nil) {
++ (id _Nullable)awaitResult:(XAsyncActionResult)action {
+    if (action == nil) {
         return nil;
     }
     
@@ -60,7 +60,7 @@ NS_ASSUME_NONNULL_END
     id __block result = nil;
     NSInteger __block done = 0;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        result = task();
+        result = action();
         done = 1;
         CFRunLoopSourceSignal(source);
         CFRunLoopWakeUp(callerRunLoop);

@@ -6,12 +6,15 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^XAsyncAction)(void);
+typedef id _Nullable (^XAsyncActionResult)(void);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface XAsync : NSObject
 
-+ (void)await:(void (^)(void))task;
-+ (id _Nullable)awaitResult:(id _Nullable (^)(void))task;
++ (void)await:(XAsyncAction)action;
++ (id _Nullable)awaitResult:(XAsyncActionResult)action;
 
 @end
 
