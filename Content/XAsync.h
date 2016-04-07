@@ -16,6 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)await:(XAsyncAction)action;
 + (id _Nullable)awaitResult:(XAsyncActionResult)action;
 
++ (void)awaitSequence:(NSArray <XAsyncAction> *)sequence;
+
++ (void)awaitAll:(NSSet <XAsyncAction> *)pool;
++ (void)awaitAny:(NSSet <XAsyncAction> *)pool;
+
 @end
 
 NS_ASSUME_NONNULL_END
