@@ -18,16 +18,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XAsync : NSObject
 
-+ (void)await:(XAsyncAction)action;
-+ (id _Nullable)awaitResult:(XAsyncActionResult)action;
-
-+ (void)awaitSequence:(NSArray <XAsyncAction> *)sequence;
-
 + (void)awaitAll:(NSSet <XAsyncAction> *)pool;
 + (void)awaitAny:(NSSet <XAsyncAction> *)pool;
++ (void)await:(XAsyncAction)action;
++ (void)awaitSequence:(NSArray <XAsyncAction> *)sequence;
++ (id _Nullable)awaitResult:(XAsyncActionResult)action;
 
 + (void)awaitSignal:(XAsyncActionSignal)action;
 + (id _Nullable)awaitSignalResult:(XAsyncActionSignalResult)action;
+
 + (void)fireSignal:(XAsyncID *)signal;
 
 @end
