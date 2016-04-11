@@ -134,6 +134,35 @@ int main(int argc, const char * argv[]) {
 //        
 //        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 5, false);
         // ------------- AWAIT ANY ---------------- //
+        
+        // --------------- AWAIT SIGNAL ------------------- //
+//        NSLog(@"About to start async task 1.");
+//        [XAsync awaitSignal:^ (XAsyncID *signal) {
+//            NSLog(@"Task 1 has been started.");
+//            for (NSInteger i = 0; i < 1000000000; i++) {
+//            }
+//            NSLog(@"Task 1 is about to end.");
+//            [XAsync xaFireSignal:signal];
+//        }];
+//        NSLog(@"Async task 1 has been done.");
+        // --------------- AWAIT SIGNAL ------------------- //
+        
+        // --------------- AWAIT SIGNAL RESULT ------------ //
+//        NSLog(@"About to start async task 2.");
+//        NSNumber *result = [XAsync awaitSignalResult:^id _Nullable(XAsyncID * _Nonnull signal) {
+//            NSLog(@"Task 2 has been started.");
+//            NSNumber *i = [XAsync awaitResult:^id _Nullable{
+//                NSInteger i = 0;
+//                for (i = 0; i < 1000000000; i++) {
+//                }
+//                return [NSNumber numberWithInteger:i];
+//            }];
+//            NSLog(@"Task 2 is about to end.");
+//            [XAsync xaFireSignal:signal];
+//            return i;
+//        }];
+//        NSLog(@"Async task 2 has been done with result: %@", [result stringValue]);
+        // --------------- AWAIT SIGNAL RESULT ------------ //
     }
     return 0;
 }

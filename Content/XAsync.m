@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface XAsync ()
 
 + (CFRunLoopSourceRef)source;
++ (NSMutableDictionary *)signals;
 
 @end
 
@@ -64,7 +65,7 @@ NS_ASSUME_NONNULL_END
     }
     
     for (XAsyncAction action in sequence) {
-        [XAsync await:action];
+        [self await:action];
     }
 }
 
@@ -124,6 +125,63 @@ NS_ASSUME_NONNULL_END
     }
 }
 
++ (void)awaitSignal:(XAsyncActionSignal)action {
+    if (action == nil) {
+        return;
+    }
+    
+    [self await:^{
+        XAsyncID *sid = [[NSUUID UUID] UUIDString];
+        dispatch_semaphore_t s = dispatch_semaphore_create(0);
+        NSMutableDictionary *signals = [self signals];
+        @synchronized (signals) {
+            signals[sid] = s;
+        }
+        action(sid);
+        dispatch_semaphore_wait(s, DISPATCH_TIME_FOREVER);
+        @synchronized (signals) {
+            [signals removeObjectForKey:sid];
+        }
+    }];
+}
+
++ (id _Nullable)awaitSignalResult:(XAsyncActionSignalResult)action {
+    if (action == nil) {
+        return nil;
+    }
+    
+    id __block result = nil;
+    [self await:^{
+        XAsyncID *sid = [[NSUUID UUID] UUIDString];
+        dispatch_semaphore_t s = dispatch_semaphore_create(0);
+        NSMutableDictionary *signals = [self signals];
+        @synchronized (signals) {
+            signals[sid] = s;
+        }
+        result = action(sid);
+        dispatch_semaphore_wait(s, DISPATCH_TIME_FOREVER);
+        @synchronized (signals) {
+            [signals removeObjectForKey:sid];
+        }
+    }];
+    return result;
+}
+
++ (void)fireSignal:(XAsyncID *)signal {
+    if (signal.length == 0) {
+        return;
+    }
+    
+    dispatch_semaphore_t candidate = nil;
+    NSMutableDictionary *signals = [self signals];
+    @synchronized (signals) {
+        candidate = signals[signal];
+    }
+    if (candidate != nil) {
+        dispatch_semaphore_signal(candidate);
+    }
+}
+
 #pragma mark - Private logic
 
 + (CFRunLoopSourceRef)source {
@@ -138,6 +196,15 @@ NS_ASSUME_NONNULL_END
         __source = CFRunLoopSourceCreate(NULL, 0, &context);
     });
     return __source;
+}
+
++ (NSMutableDictionary *)signals {
+    static NSMutableDictionary * __xa_signals = nil;
+    static dispatch_once_t __signalToken;
+    dispatch_once(&__signalToken, ^{
+        __xa_signals = [[NSMutableDictionary alloc] init];
+    });
+    return __xa_signals;
 }
 
 @end

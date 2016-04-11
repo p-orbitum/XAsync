@@ -6,8 +6,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NSString XAsyncID;
+
 typedef void (^XAsyncAction)(void);
 typedef id _Nullable (^XAsyncActionResult)(void);
+
+typedef void (^XAsyncActionSignal)(XAsyncID * _Nonnull signal);
+typedef id _Nullable (^XAsyncActionSignalResult)(XAsyncID * _Nonnull signal);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,6 +25,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)awaitAll:(NSSet <XAsyncAction> *)pool;
 + (void)awaitAny:(NSSet <XAsyncAction> *)pool;
+
++ (void)awaitSignal:(XAsyncActionSignal)action;
++ (id _Nullable)awaitSignalResult:(XAsyncActionSignalResult)action;
++ (void)fireSignal:(XAsyncID *)signal;
 
 @end
 
