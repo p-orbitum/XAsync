@@ -1,5 +1,5 @@
 //
-//  Async.h
+//  XAsync.h
 //
 //  Created by Pavlo Gorb on 4/6/16.
 //

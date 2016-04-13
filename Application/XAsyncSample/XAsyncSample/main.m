@@ -2,8 +2,7 @@
 //  main.m
 //  XAsyncSample
 //
-//  Created by Pavel Gorb on 4/6/16.
-//  Copyright © 2016 Orbitum. All rights reserved.
+//  Created by Pavlo Gorb on 4/6/16.
 //
 
 #import <Foundation/Foundation.h>

@@ -1,7 +1,7 @@
 //
-//  Async.m
+//  XAsync.m
 //
-//  Created by Pavel Gorb on 4/6/16.
+//  Created by Pavlo Gorb on 4/6/16.
 //
 
 #import "XAsync.h"

@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3612BD4A1CBC424200F95124 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612BD491CBC424200F95124 /* main.swift */; };
+		3612BD4E1CBC424E00F95124 /* XAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FB9F71CB54790005C9195 /* XAsync.m */; };
 		367FB9EF1CB54742005C9195 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FB9EE1CB54742005C9195 /* main.m */; };
 		367FB9F81CB54790005C9195 /* XAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FB9F71CB54790005C9195 /* XAsync.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3612BD451CBC424200F95124 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		367FB9E91CB54742005C9195 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -24,6 +35,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3612BD471CBC424200F95124 /* XAsyncSampleSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XAsyncSampleSwift; sourceTree = BUILT_PRODUCTS_DIR; };
+		3612BD491CBC424200F95124 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3612BD4F1CBC426900F95124 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		367FB9EB1CB54742005C9195 /* XAsyncSample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XAsyncSample; sourceTree = BUILT_PRODUCTS_DIR; };
 		367FB9EE1CB54742005C9195 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		367FB9F61CB54790005C9195 /* XAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAsync.h; sourceTree = "<group>"; };
@@ -31,6 +45,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3612BD441CBC424200F95124 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		367FB9E81CB54742005C9195 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,11 +62,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3612BD481CBC424200F95124 /* XAsyncSampleSwift */ = {
+			isa = PBXGroup;
+			children = (
+				3612BD4F1CBC426900F95124 /* BridgingHeader.h */,
+				3612BD491CBC424200F95124 /* main.swift */,
+			);
+			path = XAsyncSampleSwift;
+			sourceTree = "<group>";
+		};
 		367FB9E21CB54742005C9195 = {
 			isa = PBXGroup;
 			children = (
 				367FB9F51CB54790005C9195 /* Content */,
 				367FB9ED1CB54742005C9195 /* XAsyncSample */,
+				3612BD481CBC424200F95124 /* XAsyncSampleSwift */,
 				367FB9EC1CB54742005C9195 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				367FB9EB1CB54742005C9195 /* XAsyncSample */,
+				3612BD471CBC424200F95124 /* XAsyncSampleSwift */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +111,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3612BD461CBC424200F95124 /* XAsyncSampleSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3612BD4D1CBC424200F95124 /* Build configuration list for PBXNativeTarget "XAsyncSampleSwift" */;
+			buildPhases = (
+				3612BD431CBC424200F95124 /* Sources */,
+				3612BD441CBC424200F95124 /* Frameworks */,
+				3612BD451CBC424200F95124 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XAsyncSampleSwift;
+			productName = XAsyncSampleSwift;
+			productReference = 3612BD471CBC424200F95124 /* XAsyncSampleSwift */;
+			productType = "com.apple.product-type.tool";
+		};
 		367FB9EA1CB54742005C9195 /* XAsyncSample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 367FB9F21CB54742005C9195 /* Build configuration list for PBXNativeTarget "XAsyncSample" */;
@@ -102,9 +151,13 @@
 		367FB9E31CB54742005C9195 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Orbitum;
 				TargetAttributes = {
+					3612BD461CBC424200F95124 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					367FB9EA1CB54742005C9195 = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -123,11 +176,21 @@
 			projectRoot = "";
 			targets = (
 				367FB9EA1CB54742005C9195 /* XAsyncSample */,
+				3612BD461CBC424200F95124 /* XAsyncSampleSwift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3612BD431CBC424200F95124 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3612BD4A1CBC424200F95124 /* main.swift in Sources */,
+				3612BD4E1CBC424E00F95124 /* XAsync.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		367FB9E71CB54742005C9195 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,6 +203,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		3612BD4B1CBC424200F95124 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = XAsyncSampleSwift/BridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3612BD4C1CBC424200F95124 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = XAsyncSampleSwift/BridgingHeader.h;
+			};
+			name = Release;
+		};
 		367FB9F01CB54742005C9195 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -238,6 +318,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3612BD4D1CBC424200F95124 /* Build configuration list for PBXNativeTarget "XAsyncSampleSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3612BD4B1CBC424200F95124 /* Debug */,
+				3612BD4C1CBC424200F95124 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		367FB9E61CB54742005C9195 /* Build configuration list for PBXProject "XAsyncSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -254,6 +342,7 @@
 				367FB9F41CB54742005C9195 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

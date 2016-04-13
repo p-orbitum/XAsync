@@ -4,6 +4,7 @@
 - [Install](#install)
 - [Swift note](#swift-note)
 - [Usage](#usage)
+    - [Single task](#single-task)
 - [License](#license)
 - [See also](#see-also)
 
@@ -73,6 +74,10 @@ You can find more information about using Objective-C and Swift in the same proj
 
 Below you can find a the examples for using XAsync functionality in a synchronous manner.
 
+### Single task
+
+Waiting for one single task without any results:
+
 ###### Objective-C
 ```objective-c
 //...
@@ -86,7 +91,30 @@ NSLog(@"About to start async task 1.");
     NSLog(@"Task 1 is about to end.");
 }];
 NSLog(@"Async task 1 has been done.");
+//...
+```
+
+###### Swift
+```swift
+//...
+print("About to start async task 1.")
+XAsync.await {
+    print("Task 1 has been started.");
+    for _ in 1...1000000000 {
         
+    }
+    print("Task 1 is about to end.")
+    
+}
+print("Async task 1 has been done.")
+//...
+```    
+    
+Example of waiting for the single task which expected to return some result:
+
+###### Objective-C
+```objective-c
+///...
 NSLog(@"About to start async task 2.");
 NSNumber *result = [XAsync awaitResult:^ id _Nullable {
     NSLog(@"Task 2 has been started.");
@@ -97,23 +125,12 @@ NSNumber *result = [XAsync awaitResult:^ id _Nullable {
     return [NSNumber numberWithInteger:i];
 }];
 NSLog(@"Async task 2 has been done with result: %@", [result stringValue]);
-//...
-```
+///...
+```    
 
 ###### Swift
 ```swift
-//...
-print("About to start async task 1.")
-XAsync.await{
-    print("Task 1 has been started.");
-    for _ in 1...1000000000 {
-        
-    }
-    print("Task 1 is about to end.")
-    
-}
-print("Async task 1 has been done.")
-
+///...
 print("About to start async task 2.")
 if let result = XAsync.awaitResult({ () -> AnyObject? in
     print("Task 2 has been started.")
@@ -126,7 +143,7 @@ if let result = XAsync.awaitResult({ () -> AnyObject? in
 }) {
     print("Async task 2 has been done with result: \(result)")
 }
-//...
+///...
 ```
 
 ## License
