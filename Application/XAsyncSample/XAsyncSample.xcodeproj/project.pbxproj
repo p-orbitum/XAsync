@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3612BD4A1CBC424200F95124 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612BD491CBC424200F95124 /* main.swift */; };
-		3612BD4E1CBC424E00F95124 /* XAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FB9F71CB54790005C9195 /* XAsync.m */; };
+		366186301CCEC6B50045994F /* XAsyncTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CC6E7B1CBE39500065EAC5 /* XAsyncTask.m */; };
+		366186311CCEC6B50045994F /* XAsyncTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CC6E7B1CBE39500065EAC5 /* XAsyncTask.m */; };
 		367FB9EF1CB54742005C9195 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FB9EE1CB54742005C9195 /* main.m */; };
-		367FB9F81CB54790005C9195 /* XAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FB9F71CB54790005C9195 /* XAsync.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,8 +40,8 @@
 		3612BD4F1CBC426900F95124 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		367FB9EB1CB54742005C9195 /* XAsyncSample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XAsyncSample; sourceTree = BUILT_PRODUCTS_DIR; };
 		367FB9EE1CB54742005C9195 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		367FB9F61CB54790005C9195 /* XAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAsync.h; sourceTree = "<group>"; };
-		367FB9F71CB54790005C9195 /* XAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAsync.m; sourceTree = "<group>"; };
+		36CC6E7A1CBE39500065EAC5 /* XAsyncTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAsyncTask.h; sourceTree = "<group>"; };
+		36CC6E7B1CBE39500065EAC5 /* XAsyncTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAsyncTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,8 @@
 		367FB9F51CB54790005C9195 /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				367FB9F61CB54790005C9195 /* XAsync.h */,
-				367FB9F71CB54790005C9195 /* XAsync.m */,
+				36CC6E7A1CBE39500065EAC5 /* XAsyncTask.h */,
+				36CC6E7B1CBE39500065EAC5 /* XAsyncTask.m */,
 			);
 			name = Content;
 			path = ../../Content;
@@ -186,8 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366186311CCEC6B50045994F /* XAsyncTask.m in Sources */,
 				3612BD4A1CBC424200F95124 /* main.swift in Sources */,
-				3612BD4E1CBC424E00F95124 /* XAsync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,8 +195,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366186301CCEC6B50045994F /* XAsyncTask.m in Sources */,
 				367FB9EF1CB54742005C9195 /* main.m in Sources */,
-				367FB9F81CB54790005C9195 /* XAsync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +325,7 @@
 				3612BD4C1CBC424200F95124 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		367FB9E61CB54742005C9195 /* Build configuration list for PBXProject "XAsyncSample" */ = {
 			isa = XCConfigurationList;
