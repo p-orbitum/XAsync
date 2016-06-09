@@ -16,6 +16,7 @@ let t1 = XAsyncTask { (task) in
     }
     print("Task 1 is about to end.")
 }
+print("Task 1 is about to start.")
 t1.await()
 print("Task 1 has been done.")
 print("<<<<<<<<<<<<<<<!!!!!!!!!!>>>>>>>>>>>>>>>>>>")
@@ -30,6 +31,7 @@ let t2 = XAsyncTask { (task) in
     print("Task 2 is about to end.")
     task?.result = i;
 }
+print("Task 2 is about to start.")
 t2.await()
 print("Task 2 has been done with result: \(t2.result)")
 print("<<<<<<<<<<<<<<<!!!!!!!!!!>>>>>>>>>>>>>>>>>>")
