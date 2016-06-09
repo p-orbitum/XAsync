@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "XAsync"
-  s.version               = "2.0.0"
+  s.version               = "2.0.1"
   s.summary               = "Convenient wrapper for async operations."
   s.description           = "Allows to write an asyncronous code in synchronous manner. Inspired by C#'s await instruction."
   s.cocoapods_version     = ">= 0.36"

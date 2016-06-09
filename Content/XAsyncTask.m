@@ -166,6 +166,10 @@ NS_ASSUME_NONNULL_END
     return self;
 }
 
+- (instancetype)init {
+    return [self initWithAction:^(XAsyncTask * __weak _Nonnull task){}];
+}
+
 + (instancetype)taskWithAction:(XAsyncTaskAction)action {
     return [[self alloc] initWithAction:action];
 }
